@@ -37,7 +37,6 @@ public class Main {
 
             reader.close();
 
-            // Convert response to string
             String json = response.toString();
 
             // Extract data using helper method
@@ -45,10 +44,13 @@ public class Main {
             String forks = extractValue(json, "forks_count");
             String language = extractValue(json, "language");
 
-            // Print repository stats
-            System.out.println("Stars: " + stars);
-            System.out.println("Forks: " + forks);
-            System.out.println("Language: " + language);
+            // --- IMPROVED OUTPUT ---
+            System.out.println("\nRepository Analysis");
+            System.out.println("-------------------");
+            System.out.printf("%-15s : %s\n", "Stars", stars);
+            System.out.printf("%-15s : %s\n", "Forks", forks);
+            System.out.printf("%-15s : %s\n", "Main Language", language);
+            System.out.println("-------------------\n");
 
         } catch (Exception e) {
             System.out.println("Error: " + e.getMessage());
