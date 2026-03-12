@@ -11,8 +11,6 @@ A simple Java CLI tool that analyzes GitHub repositories using the GitHub REST A
 
 ## Usage
 
-### Compile
-
 1. **Compile**
 
 ```bash
@@ -27,12 +25,14 @@ java -cp src Main owner/repository
 3. **Example**
 
 
-```java -cp src Main torvalds/linux
+```bash
+java -cp src Main torvalds/linux
 ```
 
 ## Sample Output
 
-```Repository Analysis
+```
+Repository Analysis
 -------------------
 Stars           : 180000
 Forks           : 58000
