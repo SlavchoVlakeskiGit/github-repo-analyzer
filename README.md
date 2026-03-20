@@ -1,36 +1,33 @@
-# GitHub Repository Analyzer
+# GitHub Repo Analyzer
 
-A Java CLI tool that analyzes public GitHub repositories using the GitHub REST API and returns a concise summary of repository metadata.
+A small Java CLI tool for analyzing public GitHub repositories using the GitHub REST API.
 
-This project focuses on API consumption, JSON parsing, console output formatting, and simple command-line application design.
+The project is deliberately narrow in scope. I built it to practice consuming an external API, parsing JSON cleanly, and presenting the result in a simple command-line format.
 
-## Features
+## What it does
 
-- Fetch repository metadata from the GitHub REST API
-- Display stars, forks, and primary language
-- Accept repository input in `owner/repository` format
-- Show clean console output for quick inspection
-- Lightweight Java CLI structure
+- sends requests to the GitHub API
+- fetches repository metadata
+- parses the JSON response
+- prints a short summary of the repo
 
-## Tech Stack
+## Why I built it
 
-- **Language:** Java
-- **API:** GitHub REST API
-- **Interface:** Command line
-- **Concepts:** HTTP requests, JSON parsing, CLI tooling
+I wanted a smaller project centered around API consumption instead of database work.
 
-## Project Structure
+It also forced me to keep the code straightforward, which was kind of the point of the project in the first place.
+
+## Project structure
 
 ```text
 github-repo-analyzer/
-│
 ├── src/
 │   └── Main.java
 ├── .gitignore
 └── README.md
 ```
 
-## Example Usage
+## Example usage
 
 ### Compile
 
@@ -50,7 +47,7 @@ java -cp src Main owner/repository
 java -cp src Main torvalds/linux
 ```
 
-## Sample Output
+## Sample output
 
 ```text
 Repository Analysis
@@ -61,33 +58,16 @@ Main Language   : C
 -------------------
 ```
 
-## Skills Demonstrated
-
-- Java programming
-- REST API usage
-- Command-line application development
-- HTTP request handling
-- JSON parsing
-- Console formatting
-
 ## Limitations
 
-- Currently supports one repository per run
-- Returns a focused metadata summary rather than a full report
-- Uses a simple CLI structure without argument flags
+- supports one repository per run
+- returns a focused metadata summary rather than a full report
+- uses a simple CLI structure without argument flags
 
-## Future Improvements
+## Possible next improvements
 
-- Add support for multiple repositories in one command
-- Include open issues, watchers, and license info
-- Export results to CSV or JSON
-- Add better argument validation
-- Support authenticated GitHub API requests for higher rate limits
+- support multiple repositories in one command
+- include open issues, watchers, and license info
+- handle rate limits more explicitly
 
-## Why I Built This
-
-I built this project to practice Java API integration and create a simple but useful CLI tool that works with real public data.
-
-## Author
-
-**Slavcho Vlakeski**
+It’s a simple tool, but it helped me get more comfortable working with external APIs.
